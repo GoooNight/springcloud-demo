@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/eureka-demo/eureka-demo.iml" filepath="$PROJECT_DIR$/eureka-demo/eureka-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-demo/nacos-demo.iml" filepath="$PROJECT_DIR$/nacos-demo/nacos-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-service-demo/order-service-demo.iml" filepath="$PROJECT_DIR$/order-service-demo/order-service-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testEve/testEve.iml" filepath="$PROJECT_DIR$/testEve/testEve.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testPlayer/testPlayer.iml" filepath="$PROJECT_DIR$/testPlayer/testPlayer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service-demo/user-service-demo.iml" filepath="$PROJECT_DIR$/user-service-demo/user-service-demo.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,13 @@
+# 应用名称
+spring:
+  cloud:
+    nacos:
+      discovery:
+        cluster-name: HZ # 集群地区名
+        server-addr: localhost:8848
+        # namespace: 命名空间,环境隔离，不同环境的服务是不可见的，若要可调用，必须在一个命名空间之下。
+        namespace: e880a951-e449-48f6-84d5-f3098e5ffb57
+
+
+
+

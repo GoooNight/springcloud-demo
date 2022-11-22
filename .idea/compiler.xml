@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="user-service-demo" />
+        <module name="order-service-demo" />
+        <module name="eureka-demo" />
+        <module name="testEve" />
+        <module name="testPlayer" />
+        <module name="nacos-demo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka-demo" target="17" />
+      <module name="nacos-demo" target="1.8" />
+      <module name="order-demo" target="17" />
+      <module name="order-service-demo" target="17" />
+      <module name="testEve" target="17" />
+      <module name="testPlayer" target="17" />
+      <module name="user-service-demo" target="17" />
+      <module name="user-sevice-demo" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-demo" options="-parameters" />
+      <module name="order-demo" options="-parameters" />
+      <module name="order-service-demo" options="-parameters" />
+      <module name="testEve" options="-parameters" />
+      <module name="user-service-demo" options="-parameters" />
+      <module name="user-sevice-demo" options="-parameters" />
+    </option>
+  </component>
+</project>

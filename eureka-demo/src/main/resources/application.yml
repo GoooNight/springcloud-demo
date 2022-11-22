@@ -1,0 +1,17 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: false # 表示自己就是注册中心，不用注册自己
+    fetch-registry: false # 表示自己就是注册中心，不用去注册中心获取其他服务的地址
+    # 背景：由于Eureka拥有自我保护机制，当其注册表里服务因为网络或其他原因出现故障而关停时，Eureka不会剔除服务注册，而是等待其修复。这是AP的一种实现。
+    # 为了让其有精准的 CP健康检查，可以采取让其剔除不健康节点。
+  server:
+    enable-self-preservation: false #（设为false，关闭自我保护主要）
+    eviction-interval-timer-in-ms: 4000 #清理间隔（单位毫秒，默认是60*1000）
+
