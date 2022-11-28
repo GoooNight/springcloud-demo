@@ -24,26 +24,4 @@ public class User extends FatherEntity{
     private Integer age;
     private Integer sex;
 
-    static {
-        new Mother() {
-            @Override
-            void setName(String name) {
-
-            }
-
-            @Override
-            void setPassword(String password) {
-                super.setPassword(password);
-            }
-        };
-    }
-
-}
-
-abstract class Mother{
-        abstract void setName(String name);
-
-    void setPassword(String password) {
-        System.out.println(password);
-    }
 }

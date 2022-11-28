@@ -1,8 +1,14 @@
+
+## 优先级顺序，先该文件后nacos上的配置文件，在本地application.yml的配置。
+
 spring:
   application:
     name: nacos-demo
+  profiles:
+    active: dev #激活-dev结尾的文件（不包括文件后缀）
   cloud:
     nacos:
-      config:
-        file-extension: yml # 文件拓展格式
-        prefix: application # 配置文件的前缀名
+      server-addr: localhost:8848 # 通过nacos的地址获取nacos的配置文件
+      config: # 获取nacos上的配置文件，该文件在的命名空间已经文件拓展格式，上述激活表示为dev的文件
+        file-extension: yaml # 文件拓展格式
+        namespace: e880a951-e449-48f6-84d5-f3098e5ffb57 #所在的命名空间

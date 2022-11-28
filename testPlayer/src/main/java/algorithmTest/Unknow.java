@@ -5,14 +5,12 @@ import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 /**
  * @author 雨天留恋
  */
-public class Unknow {
+public class Unknow extends Object {
     public static int unknow01(int n) {
         int result = n;
         int prev = n;
@@ -45,14 +43,32 @@ public class Unknow {
 
     }
 
+
+    public static void getStudents(int n) {
+        Student[] stus = new Student[n];
+        Student student = new Student(17,18,"name");
+        stus[0] = student;
+        for (Student stu1 : stus) {
+            System.out.println(stu1);
+        }
+    }
+
     public static void main(String[] args) {
-        Map<Boolean, List<User>> collect = getAgeCategories(10).stream().collect(Collectors.groupingBy((user) -> user.getAge() < 30));
+        getStudents(1);
 
     }
 }
 
 @Data
-@Builder(toBuilder = true)
+@Builder()
 class User {
     private Integer age;
+}
+
+@Data
+@Builder()
+class Student {
+    private Integer age;
+    private Integer height;
+    private String name;
 }

@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/eureka-demo/eureka-demo.iml" filepath="$PROJECT_DIR$/eureka-demo/eureka-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-gateway-demo/eureka-gateway-demo.iml" filepath="$PROJECT_DIR$/eureka-gateway-demo/eureka-gateway-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feign-api-demo/feign-api-demo.iml" filepath="$PROJECT_DIR$/feign-api-demo/feign-api-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway-demo/gateway-demo.iml" filepath="$PROJECT_DIR$/gateway-demo/gateway-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/nacos-demo/nacos-demo.iml" filepath="$PROJECT_DIR$/nacos-demo/nacos-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/order-service-demo/order-service-demo.iml" filepath="$PROJECT_DIR$/order-service-demo/order-service-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/testEve/testEve.iml" filepath="$PROJECT_DIR$/testEve/testEve.iml" />

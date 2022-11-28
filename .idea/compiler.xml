@@ -7,16 +7,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="user-service-demo" />
         <module name="order-service-demo" />
+        <module name="eureka-gateway-demo" />
         <module name="eureka-demo" />
         <module name="testEve" />
         <module name="testPlayer" />
         <module name="nacos-demo" />
+        <module name="gateway-demo" />
+        <module name="user-service-demo" />
+        <module name="feign-api-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eureka-demo" target="17" />
+      <module name="eureka-gateway-demo" target="17" />
+      <module name="feign-api-demo" target="17" />
+      <module name="gateway-demo" target="1.8" />
       <module name="nacos-demo" target="1.8" />
       <module name="order-demo" target="17" />
       <module name="order-service-demo" target="17" />
@@ -29,6 +35,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-demo" options="-parameters" />
+      <module name="eureka-gateway-demo" options="-parameters" />
       <module name="order-demo" options="-parameters" />
       <module name="order-service-demo" options="-parameters" />
       <module name="testEve" options="-parameters" />
