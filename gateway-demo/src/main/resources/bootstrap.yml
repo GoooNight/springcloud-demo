@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        namespace: e880a951-e449-48f6-84d5-f3098e5ffb57
+        file-extension: yaml
+  application:
+    name: gateway-demo
