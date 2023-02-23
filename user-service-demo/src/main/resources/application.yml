@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: user-service
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080 #sentinel 控制台地址
 eureka:
   client:
     service-url:
