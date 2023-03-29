@@ -94,11 +94,17 @@ public class VideoController {
         int len = 0;
         int count = 0;
         response.setContentType("video/mp4");
+        // 必须获取文件长度
         response.setContentLength(contentLength);
+        // 设置缓冲区大小，默认1024*8，每次缓冲区满就会发送给客户端
+        response.setBufferSize(1024*1024*8);
         while ((len = inputStream.read(bytes)) != -1) {
-            count ++ ;
+            count += len;
+            // 如果没有方法flushBuffer()，则需要等缓冲区满了才会把数据发送给客户端
             outputStream.write(bytes, 0, len);
-            System.out.println("写入："+count);
+            System.out.println(response.isCommitted());
+            System.out.println(len);
+            // flushBuffer()方法会把缓冲区的数据发送给客户端
             response.flushBuffer();
         }
 
