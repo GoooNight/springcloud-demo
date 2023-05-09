@@ -1,0 +1,748 @@
+2023-04-28 13:18:03.984 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 2876 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:18:03.986 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:18:04.899 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:18:04.905 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:18:04.906 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:18:04.906 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:18:04.981 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:18:04.981 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 969 ms 
+2023-04-28 13:18:05.006 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:18:10.580 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:18:10.768 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:18:11.049 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@76ed7573, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51df2a41, org.springframework.security.web.context.SecurityContextPersistenceFilter@76b642aa, org.springframework.security.web.header.HeaderWriterFilter@612ac38b, org.springframework.security.web.authentication.logout.LogoutFilter@484b5a21, com.example.springsecurityjwt.config.filter.SecurityFilter@305aaedf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@286dfa20, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1468e880, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@517bdce0, org.springframework.security.web.session.SessionManagementFilter@6866e740, org.springframework.security.web.access.ExceptionTranslationFilter@73a5d86c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c826498] 
+2023-04-28 13:18:11.271 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:18:11.285 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:18:11.415 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.766 seconds (JVM running for 8.381) 
+2023-04-28 13:18:37.997 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:18:37.998 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:18:37.998 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms 
+2023-04-28 13:18:38.008 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:18:38.008 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:18:38.009 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:18:38.009 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:18:38.065 [http-nio-8081-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @5af3afd9 
+2023-04-28 13:18:38.128 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -------进入Security----- 
+2023-04-28 13:18:38.129 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----存入SecurityContextHolder------- 
+2023-04-28 13:18:38.130 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----放行------- 
+2023-04-28 13:18:38.132 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:18:38.146 [http-nio-8081-exec-1] INFO  c.e.s.mvc.controller.UserController - ------进来了-------- 
+2023-04-28 13:20:32.475 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:20:32.475 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:20:35.484 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:20:35.484 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:20:35.484 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:20:35.484 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:20:35.571 [http-nio-8081-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 117346 
+2023-04-28 13:20:35.645 [http-nio-8081-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 145530 
+2023-04-28 13:20:35.709 [http-nio-8081-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 145970 
+2023-04-28 13:20:35.775 [http-nio-8081-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 146363 
+2023-04-28 13:20:35.844 [http-nio-8081-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 146774 
+2023-04-28 13:20:35.915 [http-nio-8081-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 147200 
+2023-04-28 13:20:35.982 [http-nio-8081-exec-4] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 147625 
+2023-04-28 13:20:36.019 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -------进入Security----- 
+2023-04-28 13:20:36.019 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----存入SecurityContextHolder------- 
+2023-04-28 13:20:36.019 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----放行------- 
+2023-04-28 13:20:36.019 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:20:36.020 [http-nio-8081-exec-4] INFO  c.e.s.mvc.controller.UserController - ------进来了-------- 
+2023-04-28 13:21:28.528 [http-nio-8081-exec-5] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:21:28.529 [http-nio-8081-exec-5] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:21:28.529 [http-nio-8081-exec-5] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:21:28.582 [http-nio-8081-exec-5] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 13:21:36.994 [http-nio-8081-exec-6] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:21:36.995 [http-nio-8081-exec-6] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:21:36.995 [http-nio-8081-exec-6] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:21:36.996 [http-nio-8081-exec-6] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 13:22:11.412 [http-nio-8081-exec-7] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:22:11.413 [http-nio-8081-exec-7] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:22:11.413 [http-nio-8081-exec-7] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:22:11.414 [http-nio-8081-exec-7] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 13:22:11.512 [http-nio-8081-exec-7] INFO  c.e.s.mvc.service.impl.UserServiceImpl - User(id=1651503152617742338, name=aa, password=$2a$10$dALf6hJclyRWOVnChLJLmeQWM5d2zCH9uLFwzxPXRDn1zVdfeI1uC, orderByMe=null, orderByMeSort=null, token=null) 
+2023-04-28 13:26:58.797 [http-nio-8081-exec-9] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:26:58.797 [http-nio-8081-exec-9] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:26:58.797 [http-nio-8081-exec-9] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:26:58.797 [http-nio-8081-exec-9] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:26:58.846 [http-nio-8081-exec-9] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception 
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2023-04-28T13:22:14Z. Current time: 2023-04-28T13:26:58Z, a difference of 284797 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481)
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541)
+	at com.example.springsecurityjwt.config.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:64)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-04-28 13:29:18.355 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:29:18.363 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:29:18.631 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:29:24.492 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 10120 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:29:24.493 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:29:25.248 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:29:25.253 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:29:25.253 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:29:25.253 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:29:25.322 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:29:25.322 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 808 ms 
+2023-04-28 13:29:25.346 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:29:30.778 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:29:30.942 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:29:31.212 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7c0b0bd9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6150afc6, org.springframework.security.web.context.SecurityContextPersistenceFilter@1468e880, org.springframework.security.web.header.HeaderWriterFilter@79273a4f, org.springframework.security.web.authentication.logout.LogoutFilter@47fca3cc, com.example.springsecurityjwt.config.filter.SecurityFilter@17d76ebb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5602e540, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11f9b95a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49f50c8f, org.springframework.security.web.session.SessionManagementFilter@76b642aa, org.springframework.security.web.access.ExceptionTranslationFilter@3c910acd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@521c67f0] 
+2023-04-28 13:29:31.421 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:29:31.434 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:29:31.573 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.315 seconds (JVM running for 7.703) 
+2023-04-28 13:29:34.905 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:29:34.905 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:29:34.906 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 13:29:34.913 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:29:34.913 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:29:34.914 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:29:34.914 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:29:46.337 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:29:46.337 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:29:46.337 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:29:46.337 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:32:08.240 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:32:08.247 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:32:08.756 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:32:14.536 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 19228 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:32:14.538 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:32:15.329 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:32:15.333 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:32:15.334 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:32:15.334 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:32:15.405 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:32:15.405 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 846 ms 
+2023-04-28 13:32:15.429 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:32:20.889 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:32:21.049 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:32:21.310 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@257b3561, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78861d9e, org.springframework.security.web.context.SecurityContextPersistenceFilter@65a4b9d6, org.springframework.security.web.header.HeaderWriterFilter@527d5e48, org.springframework.security.web.authentication.logout.LogoutFilter@13d10057, com.example.springsecurityjwt.config.filter.SecurityFilter@305aaedf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41f90b10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67593f7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a878778, org.springframework.security.web.session.SessionManagementFilter@105c6c9e, org.springframework.security.web.access.ExceptionTranslationFilter@7a34c1f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c83ed77] 
+2023-04-28 13:32:21.508 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:32:21.522 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:32:21.672 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.369 seconds (JVM running for 7.777) 
+2023-04-28 13:32:25.121 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:32:25.121 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:32:25.122 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 13:32:25.129 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:32:25.130 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:32:25.130 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:32:25.130 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:32:25.171 [http-nio-8081-exec-1] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception 
+java.lang.IllegalArgumentException: not support type : class com.example.springsecurityjwt.util.R
+	at com.alibaba.druid.support.json.JSONWriter.writeObject(JSONWriter.java:138)
+	at com.alibaba.druid.support.json.JSONUtils.toJSONString(JSONUtils.java:22)
+	at com.example.springsecurityjwt.config.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:66)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-04-28 13:36:18.407 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:36:18.414 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:36:18.923 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:36:26.363 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 4352 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:36:26.365 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:36:27.184 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:36:27.189 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:36:27.189 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:36:27.189 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:36:27.280 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:36:27.280 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 891 ms 
+2023-04-28 13:36:27.304 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:36:32.794 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:36:32.968 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:36:33.267 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6150afc6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49f50c8f, org.springframework.security.web.context.SecurityContextPersistenceFilter@508f4bb5, org.springframework.security.web.header.HeaderWriterFilter@4e26987b, org.springframework.security.web.authentication.logout.LogoutFilter@55746340, com.example.springsecurityjwt.config.filter.SecurityFilter@69d2e517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11f9b95a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42066f0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46e6458d, org.springframework.security.web.session.SessionManagementFilter@29b5e7db, org.springframework.security.web.access.ExceptionTranslationFilter@612ac38b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d156f8f] 
+2023-04-28 13:36:33.522 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:36:33.537 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:36:33.679 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.652 seconds (JVM running for 8.213) 
+2023-04-28 13:37:00.680 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:37:00.680 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:37:00.681 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms 
+2023-04-28 13:37:00.689 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:37:00.689 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:37:00.690 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:37:00.690 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:40:12.274 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:40:12.281 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:40:12.795 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:40:18.530 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 20996 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:40:18.532 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:40:19.314 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:40:19.319 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:40:19.319 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:40:19.319 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:40:19.390 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:40:19.390 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 837 ms 
+2023-04-28 13:40:19.415 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:40:24.791 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:40:24.963 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:40:25.232 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@257b3561, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78861d9e, org.springframework.security.web.context.SecurityContextPersistenceFilter@65a4b9d6, org.springframework.security.web.header.HeaderWriterFilter@527d5e48, org.springframework.security.web.authentication.logout.LogoutFilter@13d10057, com.example.springsecurityjwt.config.filter.SecurityFilter@69d2e517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41f90b10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67593f7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a878778, org.springframework.security.web.session.SessionManagementFilter@105c6c9e, org.springframework.security.web.access.ExceptionTranslationFilter@7a34c1f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c83ed77] 
+2023-04-28 13:40:25.430 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:40:25.443 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:40:25.586 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.293 seconds (JVM running for 7.691) 
+2023-04-28 13:40:42.497 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:40:42.498 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:40:42.499 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 13:40:42.506 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:40:42.506 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:40:42.507 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:40:42.507 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:41:27.745 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:41:27.754 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:41:28.261 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:41:33.979 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 15660 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:41:33.980 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:41:34.744 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:41:34.749 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:41:34.749 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:41:34.749 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:41:34.835 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:41:34.836 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 836 ms 
+2023-04-28 13:41:34.860 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:41:40.253 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:41:40.416 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:41:40.708 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6150afc6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@49f50c8f, org.springframework.security.web.context.SecurityContextPersistenceFilter@508f4bb5, org.springframework.security.web.header.HeaderWriterFilter@4e26987b, org.springframework.security.web.authentication.logout.LogoutFilter@55746340, com.example.springsecurityjwt.config.filter.SecurityFilter@69d2e517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@11f9b95a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@42066f0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46e6458d, org.springframework.security.web.session.SessionManagementFilter@29b5e7db, org.springframework.security.web.access.ExceptionTranslationFilter@612ac38b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d156f8f] 
+2023-04-28 13:41:40.915 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:41:40.929 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:41:41.060 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.314 seconds (JVM running for 7.698) 
+2023-04-28 13:41:44.384 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:41:44.393 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:41:44.898 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:41:50.704 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 24084 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:41:50.706 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:41:51.630 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:41:51.635 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:41:51.635 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:41:51.635 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:41:51.711 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:41:51.712 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 970 ms 
+2023-04-28 13:41:51.735 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:41:57.101 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:41:57.265 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:41:57.520 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@46e6458d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6297cb4b, org.springframework.security.web.context.SecurityContextPersistenceFilter@11f9b95a, org.springframework.security.web.header.HeaderWriterFilter@39342614, org.springframework.security.web.authentication.logout.LogoutFilter@7f1ad846, com.example.springsecurityjwt.config.filter.SecurityFilter@3b30eec5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@687e561b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@299786b1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65d6640, org.springframework.security.web.session.SessionManagementFilter@1468e880, org.springframework.security.web.access.ExceptionTranslationFilter@4dd4965a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3749c2b] 
+2023-04-28 13:41:57.712 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:41:57.735 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:41:57.863 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.402 seconds (JVM running for 7.856) 
+2023-04-28 13:42:39.258 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:42:39.259 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:42:39.259 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms 
+2023-04-28 13:42:39.267 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:42:39.267 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:42:39.267 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:42:39.267 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:44:43.111 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:44:43.112 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:44:43.112 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:44:43.112 [http-nio-8081-exec-4] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:44:45.975 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:44:45.975 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:44:45.975 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:44:45.975 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:44:48.671 [http-nio-8081-exec-5] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:44:48.672 [http-nio-8081-exec-5] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:44:48.675 [http-nio-8081-exec-5] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:44:48.700 [http-nio-8081-exec-5] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 13:44:48.734 [http-nio-8081-exec-5] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @44ebcd03 
+2023-04-28 13:44:48.822 [http-nio-8081-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 171796 
+2023-04-28 13:44:48.889 [http-nio-8081-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 172247 
+2023-04-28 13:44:48.953 [http-nio-8081-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 172661 
+2023-04-28 13:44:49.024 [http-nio-8081-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 173065 
+2023-04-28 13:44:49.092 [http-nio-8081-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 173491 
+2023-04-28 13:44:49.156 [http-nio-8081-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 173900 
+2023-04-28 13:44:49.231 [http-nio-8081-exec-5] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000, version : 1.2.5, lastPacketReceivedIdleMillis : 174315 
+2023-04-28 13:44:49.353 [http-nio-8081-exec-5] INFO  c.e.s.mvc.service.impl.UserServiceImpl - User(id=1651503152617742338, name=aa, password=$2a$10$dALf6hJclyRWOVnChLJLmeQWM5d2zCH9uLFwzxPXRDn1zVdfeI1uC, orderByMe=null, orderByMeSort=null, token=null) 
+2023-04-28 13:44:56.988 [http-nio-8081-exec-6] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:44:56.988 [http-nio-8081-exec-6] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:44:56.988 [http-nio-8081-exec-6] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:44:56.988 [http-nio-8081-exec-6] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:45:07.517 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:45:07.524 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:45:07.853 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:45:13.528 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 26972 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:45:13.529 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:45:14.333 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:45:14.338 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:45:14.338 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:45:14.338 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:45:14.409 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:45:14.409 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 859 ms 
+2023-04-28 13:45:14.435 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:45:19.716 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:45:19.876 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:45:20.131 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@65d6640, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@672d8370, org.springframework.security.web.context.SecurityContextPersistenceFilter@687e561b, org.springframework.security.web.header.HeaderWriterFilter@31e3c34, org.springframework.security.web.authentication.logout.LogoutFilter@2bc2e022, com.example.springsecurityjwt.config.filter.SecurityFilter@69d2e517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75f8d9b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f7ae05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13137835, org.springframework.security.web.session.SessionManagementFilter@5602e540, org.springframework.security.web.access.ExceptionTranslationFilter@4e26987b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64d93096] 
+2023-04-28 13:45:20.325 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:45:20.343 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:45:20.471 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.188 seconds (JVM running for 7.614) 
+2023-04-28 13:45:21.946 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:45:21.946 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:45:21.947 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 13:45:21.955 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:45:21.955 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:45:21.958 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:45:21.989 [http-nio-8081-exec-1] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 13:45:22.021 [http-nio-8081-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @44ebcd03 
+2023-04-28 13:45:22.152 [http-nio-8081-exec-1] INFO  c.e.s.mvc.service.impl.UserServiceImpl - User(id=1651503152617742338, name=aa, password=$2a$10$dALf6hJclyRWOVnChLJLmeQWM5d2zCH9uLFwzxPXRDn1zVdfeI1uC, orderByMe=null, orderByMeSort=null, token=null) 
+2023-04-28 13:45:28.517 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:45:28.517 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:45:28.518 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:45:28.518 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:45:28.563 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -------进入Security----- 
+2023-04-28 13:45:28.563 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----存入SecurityContextHolder------- 
+2023-04-28 13:45:28.564 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----放行------- 
+2023-04-28 13:45:28.565 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:45:28.568 [http-nio-8081-exec-3] INFO  c.e.s.mvc.controller.UserController - ------进来了-------- 
+2023-04-28 13:45:57.888 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:45:57.889 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:45:57.889 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:45:57.889 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:45:57.926 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -------进入Security----- 
+2023-04-28 13:45:57.926 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----存入SecurityContextHolder------- 
+2023-04-28 13:45:57.926 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----放行------- 
+2023-04-28 13:45:57.926 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:48:10.985 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:48:10.993 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:48:11.488 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:48:14.752 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 17140 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:48:14.753 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:48:15.622 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:48:15.627 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:48:15.628 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:48:15.628 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:48:15.707 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:48:15.708 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 931 ms 
+2023-04-28 13:48:15.739 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:48:21.007 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:48:21.182 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:48:21.501 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@63880be9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@27053257, org.springframework.security.web.context.SecurityContextPersistenceFilter@1eabfad5, org.springframework.security.web.header.HeaderWriterFilter@774c5e5c, org.springframework.security.web.authentication.logout.LogoutFilter@4f82248f, com.example.springsecurityjwt.config.filter.SecurityFilter@3b65084e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2a259f6f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ccf6114, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a0e97fc, org.springframework.security.web.session.SessionManagementFilter@257b3561, org.springframework.security.web.access.ExceptionTranslationFilter@7fbbdd8a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77e730bd] 
+2023-04-28 13:48:21.738 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:48:21.753 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:48:21.909 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.42 seconds (JVM running for 8.418) 
+2023-04-28 13:48:27.142 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:48:27.142 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:48:27.143 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 13:48:27.152 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:48:27.152 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:48:27.155 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:48:27.190 [http-nio-8081-exec-1] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 13:48:27.230 [http-nio-8081-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @c8c12ac 
+2023-04-28 13:48:27.363 [http-nio-8081-exec-1] INFO  c.e.s.mvc.service.impl.UserServiceImpl - User(id=1651503152617742338, name=aa, password=$2a$10$dALf6hJclyRWOVnChLJLmeQWM5d2zCH9uLFwzxPXRDn1zVdfeI1uC, orderByMe=null, orderByMeSort=null, token=null) 
+2023-04-28 13:48:40.113 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:48:40.114 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:48:40.114 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:48:40.114 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:48:40.162 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -------进入Security----- 
+2023-04-28 13:48:40.162 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----存入SecurityContextHolder------- 
+2023-04-28 13:48:40.163 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----放行------- 
+2023-04-28 13:48:40.163 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:49:55.317 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:49:55.325 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:49:55.815 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:50:01.660 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 15968 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:50:01.662 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:50:02.500 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:50:02.505 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:50:02.505 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:50:02.505 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:50:02.582 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:50:02.583 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 897 ms 
+2023-04-28 13:50:02.607 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:50:07.932 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:50:08.097 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:50:08.361 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@257b3561, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78861d9e, org.springframework.security.web.context.SecurityContextPersistenceFilter@65a4b9d6, org.springframework.security.web.header.HeaderWriterFilter@527d5e48, org.springframework.security.web.authentication.logout.LogoutFilter@13d10057, com.example.springsecurityjwt.config.filter.SecurityFilter@69d2e517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41f90b10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67593f7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a878778, org.springframework.security.web.session.SessionManagementFilter@105c6c9e, org.springframework.security.web.access.ExceptionTranslationFilter@7a34c1f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c83ed77] 
+2023-04-28 13:50:08.567 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:50:08.581 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:50:08.719 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.295 seconds (JVM running for 7.684) 
+2023-04-28 13:50:12.323 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 13:50:12.323 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 13:50:12.324 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 13:50:12.332 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:50:12.332 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:50:12.335 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:50:12.366 [http-nio-8081-exec-1] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 13:50:12.399 [http-nio-8081-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @44ebcd03 
+2023-04-28 13:50:12.530 [http-nio-8081-exec-1] INFO  c.e.s.mvc.service.impl.UserServiceImpl - User(id=1651503152617742338, name=aa, password=$2a$10$dALf6hJclyRWOVnChLJLmeQWM5d2zCH9uLFwzxPXRDn1zVdfeI1uC, orderByMe=null, orderByMeSort=null, token=null) 
+2023-04-28 13:50:19.338 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:50:19.338 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:50:19.338 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:50:19.338 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:50:19.382 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -------进入Security----- 
+2023-04-28 13:50:19.382 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----存入SecurityContextHolder------- 
+2023-04-28 13:50:19.383 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----放行------- 
+2023-04-28 13:50:19.384 [http-nio-8081-exec-2] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:50:19.385 [http-nio-8081-exec-2] INFO  c.e.s.mvc.controller.UserController - {2} 
+2023-04-28 13:50:30.779 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 13:50:30.779 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 13:50:30.780 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----有token就解析------- 
+2023-04-28 13:50:30.780 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----解析token------- 
+2023-04-28 13:50:30.815 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -------进入Security----- 
+2023-04-28 13:50:30.815 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----存入SecurityContextHolder------- 
+2023-04-28 13:50:30.815 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----放行------- 
+2023-04-28 13:50:30.815 [http-nio-8081-exec-3] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 13:50:30.816 [http-nio-8081-exec-3] INFO  c.e.s.mvc.controller.UserController - 2 
+2023-04-28 13:50:52.279 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:50:52.287 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:50:52.805 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:50:58.069 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 19212 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:50:58.071 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:50:58.845 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:50:58.850 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:50:58.850 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:50:58.850 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:50:58.921 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:50:58.921 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 829 ms 
+2023-04-28 13:50:58.944 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:51:04.355 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:51:04.521 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:51:04.783 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@257b3561, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78861d9e, org.springframework.security.web.context.SecurityContextPersistenceFilter@65a4b9d6, org.springframework.security.web.header.HeaderWriterFilter@527d5e48, org.springframework.security.web.authentication.logout.LogoutFilter@13d10057, com.example.springsecurityjwt.config.filter.SecurityFilter@69d2e517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41f90b10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67593f7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a878778, org.springframework.security.web.session.SessionManagementFilter@105c6c9e, org.springframework.security.web.access.ExceptionTranslationFilter@7a34c1f6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c83ed77] 
+2023-04-28 13:51:04.979 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:51:04.993 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:51:05.123 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.301 seconds (JVM running for 7.683) 
+2023-04-28 13:59:44.976 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 13:59:44.984 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 13:59:45.268 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 13:59:51.226 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 10724 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 13:59:51.227 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 13:59:51.963 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 13:59:51.975 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:59:51.975 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 13:59:51.975 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 13:59:52.053 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 13:59:52.053 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 803 ms 
+2023-04-28 13:59:52.077 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 13:59:57.245 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 13:59:57.418 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 13:59:57.733 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6614289a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4148ce43, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b6cad77, org.springframework.security.web.header.HeaderWriterFilter@562f6681, org.springframework.security.web.authentication.logout.LogoutFilter@1468e880, com.example.springsecurityjwt.config.filter.SecurityFilter@4de91056, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40dee07b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21e39b82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46fb9581, org.springframework.security.web.session.SessionManagementFilter@6edd4fe2, org.springframework.security.web.access.ExceptionTranslationFilter@72c704f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78861d9e] 
+2023-04-28 13:59:57.954 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 13:59:57.969 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 13:59:58.113 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.137 seconds (JVM running for 7.629) 
+2023-04-28 14:00:07.205 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 14:00:07.214 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 14:00:07.697 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 14:00:13.385 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 14124 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 14:00:13.387 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 14:00:14.151 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 14:00:14.155 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:00:14.156 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 14:00:14.156 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 14:00:14.224 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 14:00:14.224 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 815 ms 
+2023-04-28 14:00:14.247 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 14:00:19.481 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 14:00:19.654 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 14:00:19.943 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6207145c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a259f6f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2773504f, org.springframework.security.web.header.HeaderWriterFilter@54ca9420, org.springframework.security.web.authentication.logout.LogoutFilter@6866e740, com.example.springsecurityjwt.config.filter.SecurityFilter@3d71e10b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40d10264, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6edd4fe2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ccf6114, org.springframework.security.web.session.SessionManagementFilter@16ef1160, org.springframework.security.web.access.ExceptionTranslationFilter@527d5e48, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53e82089] 
+2023-04-28 14:00:20.169 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:00:20.184 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 14:00:20.326 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.173 seconds (JVM running for 7.549) 
+2023-04-28 14:00:31.385 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 14:00:31.386 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 14:00:31.387 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 14:00:31.395 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 14:00:31.395 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 14:00:31.398 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 14:00:31.428 [http-nio-8081-exec-1] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 14:00:31.461 [http-nio-8081-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @44ebcd03 
+2023-04-28 14:00:31.521 [http-nio-8081-exec-1] ERROR c.e.s.config.exception.GlobalExceptionHandler - java.lang.IllegalArgumentException: rawPassword cannot be null
+	at org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder.matches(BCryptPasswordEncoder.java:123)
+	at com.example.springsecurityjwt.util.PasswordUtil.passwordMatches(PasswordUtil.java:23)
+	at com.example.springsecurityjwt.mvc.service.impl.UserServiceImpl.queryUser(UserServiceImpl.java:47)
+	at com.example.springsecurityjwt.mvc.service.impl.UserServiceImpl$$FastClassBySpringCGLIB$$96257a8e.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy.invokeMethod(CglibAopProxy.java:386)
+	at org.springframework.aop.framework.CglibAopProxy.access$000(CglibAopProxy.java:85)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:704)
+	at com.example.springsecurityjwt.mvc.service.impl.UserServiceImpl$$EnhancerBySpringCGLIB$$314ffc79.queryUser(<generated>)
+	at com.example.springsecurityjwt.mvc.controller.UserController.login(UserController.java:45)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at com.example.springsecurityjwt.config.filter.AccessFilter.doFilter(AccessFilter.java:64)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.example.springsecurityjwt.config.filter.SecurityFilter.doFilterInternal(SecurityFilter.java:51)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ 
+2023-04-28 14:00:31.522 [http-nio-8081-exec-1] ERROR c.e.s.config.exception.GlobalExceptionHandler - java.lang.IllegalArgumentException: rawPassword cannot be null;com.example.springsecurityjwt.util.PasswordUtil:23 
+2023-04-28 14:01:01.807 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 14:01:01.814 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 14:01:02.305 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 14:01:07.949 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 7696 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 14:01:07.951 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 14:01:08.724 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 14:01:08.728 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:01:08.729 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 14:01:08.729 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 14:01:08.799 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 14:01:08.800 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 827 ms 
+2023-04-28 14:01:08.823 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 14:01:14.228 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 14:01:14.397 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 14:01:14.660 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6207145c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a259f6f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2773504f, org.springframework.security.web.header.HeaderWriterFilter@54ca9420, org.springframework.security.web.authentication.logout.LogoutFilter@6866e740, com.example.springsecurityjwt.config.filter.SecurityFilter@69d2e517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40d10264, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6edd4fe2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ccf6114, org.springframework.security.web.session.SessionManagementFilter@16ef1160, org.springframework.security.web.access.ExceptionTranslationFilter@527d5e48, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53e82089] 
+2023-04-28 14:01:14.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:01:14.877 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 14:01:15.006 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.292 seconds (JVM running for 7.678) 
+2023-04-28 14:01:26.669 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 14:01:26.669 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 14:01:26.670 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 14:01:26.678 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 14:01:26.678 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 14:01:26.681 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 14:01:26.711 [http-nio-8081-exec-1] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 14:01:26.741 [http-nio-8081-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @44ebcd03 
+2023-04-28 14:01:26.866 [http-nio-8081-exec-1] INFO  c.e.s.mvc.service.impl.UserServiceImpl - User(id=1651503152617742338, name=aa, password=$2a$10$dALf6hJclyRWOVnChLJLmeQWM5d2zCH9uLFwzxPXRDn1zVdfeI1uC, orderByMe=null, orderByMeSort=null) 
+2023-04-28 14:02:11.581 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 14:02:11.590 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 14:02:12.097 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 14:02:17.852 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 20224 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 14:02:17.854 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 14:02:18.689 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 14:02:18.694 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:02:18.695 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 14:02:18.695 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 14:02:18.790 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 14:02:18.790 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 915 ms 
+2023-04-28 14:02:18.817 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 14:02:24.393 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 14:02:24.560 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 14:02:24.851 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@65d6640, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@672d8370, org.springframework.security.web.context.SecurityContextPersistenceFilter@687e561b, org.springframework.security.web.header.HeaderWriterFilter@31e3c34, org.springframework.security.web.authentication.logout.LogoutFilter@2bc2e022, com.example.springsecurityjwt.config.filter.SecurityFilter@69d2e517, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@75f8d9b0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f7ae05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@13137835, org.springframework.security.web.session.SessionManagementFilter@5602e540, org.springframework.security.web.access.ExceptionTranslationFilter@4e26987b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64d93096] 
+2023-04-28 14:02:25.055 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:02:25.072 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 14:02:25.199 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.578 seconds (JVM running for 7.98) 
+2023-04-28 14:02:28.014 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 14:02:28.022 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 14:02:28.520 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 14:02:34.293 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 26772 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 14:02:34.294 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 14:02:35.055 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 14:02:35.060 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:02:35.060 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 14:02:35.060 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 14:02:35.150 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 14:02:35.150 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 834 ms 
+2023-04-28 14:02:35.174 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 14:02:40.589 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 14:02:40.765 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 14:02:41.046 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6614289a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4148ce43, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b6cad77, org.springframework.security.web.header.HeaderWriterFilter@562f6681, org.springframework.security.web.authentication.logout.LogoutFilter@1468e880, com.example.springsecurityjwt.config.filter.SecurityFilter@4de91056, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@40dee07b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21e39b82, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@46fb9581, org.springframework.security.web.session.SessionManagementFilter@6edd4fe2, org.springframework.security.web.access.ExceptionTranslationFilter@72c704f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78861d9e] 
+2023-04-28 14:02:41.250 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:02:41.264 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 14:02:41.405 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.352 seconds (JVM running for 7.797) 
+2023-04-28 14:02:43.425 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 14:02:43.425 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 14:02:43.426 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 14:02:43.434 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 14:02:43.434 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 14:02:43.436 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 14:02:43.466 [http-nio-8081-exec-1] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 14:02:43.497 [http-nio-8081-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @44ebcd03 
+2023-04-28 14:02:43.624 [http-nio-8081-exec-1] INFO  c.e.s.mvc.service.impl.UserServiceImpl - User(id=1651503152617742338, name=aa, password=$2a$10$dALf6hJclyRWOVnChLJLmeQWM5d2zCH9uLFwzxPXRDn1zVdfeI1uC, orderByMe=null, orderByMeSort=null) 
+2023-04-28 14:14:36.568 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 14:14:36.576 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 14:14:36.845 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-04-28 14:14:42.519 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 5876 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-04-28 14:14:42.521 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-04-28 14:14:43.313 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-04-28 14:14:43.318 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:14:43.318 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-04-28 14:14:43.318 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-04-28 14:14:43.392 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-04-28 14:14:43.392 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 848 ms 
+2023-04-28 14:14:43.417 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-04-28 14:14:48.565 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-04-28 14:14:48.738 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-04-28 14:14:49.014 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@29bd056a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21e702b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@b144175, org.springframework.security.web.header.HeaderWriterFilter@73ae82da, org.springframework.security.web.authentication.logout.LogoutFilter@186dcb05, com.example.springsecurityjwt.config.filter.SecurityFilter@2404abe2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ac3a6f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fee7ca, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f1fec57, org.springframework.security.web.session.SessionManagementFilter@75f8d9b0, org.springframework.security.web.access.ExceptionTranslationFilter@b4d83ac, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6150afc6] 
+2023-04-28 14:14:49.227 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-04-28 14:14:49.247 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-04-28 14:14:49.396 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.146 seconds (JVM running for 7.557) 
+2023-04-28 14:14:50.756 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-04-28 14:14:50.756 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-04-28 14:14:50.757 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-04-28 14:14:50.764 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-04-28 14:14:50.765 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-04-28 14:14:50.767 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------执行跨域过滤器------------------- 
+2023-04-28 14:14:50.797 [http-nio-8081-exec-1] INFO  c.e.s.mvc.controller.UserController - 登录 
+2023-04-28 14:14:50.829 [http-nio-8081-exec-1] WARN  c.b.m.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @44ebcd03 
+2023-04-28 14:14:50.955 [http-nio-8081-exec-1] INFO  c.e.s.mvc.service.impl.UserServiceImpl - User(id=1651503152617742338, name=aa, password=$2a$10$dALf6hJclyRWOVnChLJLmeQWM5d2zCH9uLFwzxPXRDn1zVdfeI1uC, orderByMe=null, orderByMeSort=null) 
+2023-04-28 15:52:04.880 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-04-28 15:52:04.909 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-04-28 15:52:05.203 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 

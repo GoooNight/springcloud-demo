@@ -1,7 +1,10 @@
 package reactorDemo;
 
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -24,5 +27,12 @@ public class ReactorDemo {
             }
             return i+1;
         }).subscribe(System.out::println);
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(6);
+        list.add(7);
+        Mono.just(list).map(integers -> integers.stream().filter(integer -> integer > 5).collect(Collectors.toSet())).subscribe(System.out::println);
     }
 }

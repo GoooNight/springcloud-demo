@@ -1,24 +1,16 @@
 package com.example.testeve.entity;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.Singular;
-import lombok.experimental.Accessors;
 
-import java.util.List;
+import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 
 /**
  * @author 雨天留恋
+ * @date 2023-05-05 17:08
  */
 @Data
-// 建造者模式
-@Builder
-// 链式调用
-@Accessors(chain = true)
-public class User {
-    private String name;
-    private Integer id;
-    private String email;
-    @Singular("course")
-    private List<String> list;
+public class User implements Serializable {
+    @NotNull
+    private String username;
 }

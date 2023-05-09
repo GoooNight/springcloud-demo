@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/gradle-demo" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/testEve/pom.xml" />
         <option value="$PROJECT_DIR$/testPlayer/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-demo/pom.xml" />
         <option value="$PROJECT_DIR$/user-service-demo/pom.xml" />
@@ -12,6 +15,9 @@
         <option value="$PROJECT_DIR$/feign-api-demo/pom.xml" />
         <option value="$PROJECT_DIR$/gateway-demo/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-gateway-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mysql-test/pom.xml" />
+        <option value="$PROJECT_DIR$/springsecurityjwt/pom.xml" />
+        <option value="$PROJECT_DIR$/testEve/pom.xml" />
       </list>
     </option>
   </component>

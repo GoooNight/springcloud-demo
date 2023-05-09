@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springsecurityjwt.mvc.mapper.UserMapper">
+
+    <resultMap type="com.example.springsecurityjwt.mvc.domain.User" id="UserMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="name" column="user_name" jdbcType="VARCHAR"/>
+        <result property="password" column="password" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="UserMap">
+        select id,
+               user_name,
+               password
+        from user
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAll" resultMap="UserMap">
+        select
+        id, user_name, password from user
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and user_name = #{name}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+        </where>
+        <if test="orderByMe != null and orderByMe != '' and orderByMeSort != null and orderByMeSort != ''">
+            order by
+            <choose>
+                <when test="orderByMe == 'id' and orderByMeSort == 'ASC'">
+                    id
+                </when>
+                <when test="orderByMe == 'user_name' and orderByMeSort == 'ASC'">
+                    name
+                </when>
+                <when test="orderByMe == 'password' and orderByMeSort == 'ASC'">
+                    password
+                </when>
+                <when test="orderByMe == 'id' and orderByMeSort == 'DESC'">
+                    id desc
+                </when>
+                <when test="orderByMe == 'user_name' and orderByMeSort == 'DESC'">
+                    user_name desc
+                </when>
+                <when test="orderByMe == 'password' and orderByMeSort == 'DESC'">
+                    password desc
+                </when>
+                <otherwise>
+                    1
+                </otherwise>
+            </choose>
+        </if>
+    </select>
+
+    <!--模糊查询指定行数据-->
+    <select id="queryAllLike" resultMap="UserMap">
+        select
+        id, user_name, password from user
+        <where>
+            <if test="id != null and id != ''">
+                and id like concat('%',#{id},'%')
+            </if>
+            <if test="name != null and name != ''">
+                and user_name like concat('%',#{name},'%')
+            </if>
+            <if test="password != null and password != ''">
+                and password like concat('%',#{password},'%')
+            </if>
+        </where>
+        <if test="orderByMe != null and orderByMe != '' and orderByMeSort != null and orderByMeSort != ''">
+            order by
+            <choose>
+                <when test="orderByMe == 'id' and orderByMeSort == 'ASC'">
+                    id
+                </when>
+                <when test="orderByMe == 'user_name' and orderByMeSort == 'ASC'">
+                    name
+                </when>
+                <when test="orderByMe == 'password' and orderByMeSort == 'ASC'">
+                    password
+                </when>
+                <when test="orderByMe == 'id' and orderByMeSort == 'DESC'">
+                    id desc
+                </when>
+                <when test="orderByMe == 'user_name' and orderByMeSort == 'DESC'">
+                    user_name desc
+                </when>
+                <when test="orderByMe == 'password' and orderByMeSort == 'DESC'">
+                    password desc
+                </when>
+                <otherwise>
+                    1
+                </otherwise>
+            </choose>
+        </if>
+    </select>
+
+    <!--统计总行数-->
+    <select id="count" resultType="java.lang.Long">
+        select count(*)
+        from user
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="name != null and name != ''">
+                and user_name = #{name}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+        </where>
+    </select>
+
+
+    <insert id="insertBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into user
+        (user_name, password)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.password})
+        </foreach>
+    </insert>
+
+    <insert id="insertOrUpdateBatch" keyProperty="id" useGeneratedKeys="true">
+        insert into user
+        (user_name, password)
+        values
+        <foreach collection="entities" item="entity" separator=",">
+            (#{entity.name}, #{entity.password})
+        </foreach>
+        on duplicate key update
+        user_name = values(user_name
+        ),
+        password = values(password
+        )
+    </insert>
+
+</mapper>
+

@@ -7,6 +7,7 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8080 #sentinel 控制台地址
+      web-context-unify: false # 关闭context上下文整合，不关闭会导致链路模式的流控失效，因为会默认把controller都设置为一个链路过来的
 eureka:
   client:
     service-url:
