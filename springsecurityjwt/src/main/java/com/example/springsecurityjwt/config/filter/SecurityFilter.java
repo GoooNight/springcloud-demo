@@ -68,13 +68,15 @@ public class SecurityFilter extends OncePerRequestFilter {
             userName =
                     jwtParser.parseClaimsJws(token).getBody().get("userName").toString();
         } catch (ExpiredJwtException e){
+            log.error("token过期");
             response.setCharacterEncoding("UTF-8");
             response.setContentType("application/json; charset=utf-8");
             PrintWriter writer = response.getWriter();
-            writer.append(JSON.toJSONString(R.forbidden()));
+            writer.append(JSON.toJSONString(R.tokenExpired()));
             return;
         }
         catch (Exception e) {
+            log.error("token解析失败");
             response.setCharacterEncoding("UTF-8");
             response.setContentType("application/json; charset=utf-8");
             PrintWriter writer = response.getWriter();
@@ -84,10 +86,8 @@ public class SecurityFilter extends OncePerRequestFilter {
         User user = userMapper.selectOne(new LambdaQueryWrapper<User>().eq(User::getId, userId).eq(User::getName,
                 userName));
         if (Optional.ofNullable(user).isEmpty()) {
-            response.setCharacterEncoding("UTF-8");
-            response.setContentType("application/json; charset=utf-8");
-            PrintWriter writer = response.getWriter();
-            writer.append(R.notFound().toString());
+            log.error("未找到用户");
+            filterChain.doFilter(request, response);
             return;
         }
         log.info("-------进入Security-----");
@@ -98,20 +98,20 @@ public class SecurityFilter extends OncePerRequestFilter {
                 permissions.stream().map(Permission::getPermission).map(String::valueOf).collect(Collectors.toList());
         // 第一种写法
         // 构建LoginUser
-        LoginUser loginUser = LoginUser.builder().user(user).build();
+        // LoginUser loginUser = LoginUser.builder().user(user).build();
         // 获取用户的权限
-        List<SimpleGrantedAuthority> collect =
-                list.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
+        // List<SimpleGrantedAuthority> collect =
+                // list.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList());
         // 传入令牌中
-        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken
-                = new UsernamePasswordAuthenticationToken(loginUser,null,collect);
+        // UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken
+        //         = new UsernamePasswordAuthenticationToken(loginUser,null,collect);
 
         //第二种写法
         // 构建LoginUser
-        // LoginUser loginUser = LoginUser.builder().user(user).permissions(list).build();
+        LoginUser loginUser = LoginUser.builder().user(user).permissions(list).build();
         // 传入令牌中
-        // UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken
-        //         = new UsernamePasswordAuthenticationToken(loginUser,null,loginUser.getAuthorities());
+        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken
+                = new UsernamePasswordAuthenticationToken(loginUser,null,loginUser.getAuthorities());
         SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
         log.info("-----放行-------");
         filterChain.doFilter(request, response);

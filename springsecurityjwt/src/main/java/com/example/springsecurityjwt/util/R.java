@@ -140,4 +140,18 @@ public class R implements Serializable {
         r.message = HttpStatus.NOT_FOUND.getReasonPhrase();
         return r;
     }
+
+    /***
+     * @param :
+     * @return R
+     * @author 雨天留恋
+     * @description token过期
+     * @date 2023/5/9 14:17
+     */
+    public static R tokenExpired() {
+        R r = new R();
+        r.code = 10001;
+        r.message = "Token已过期！！";
+        return r;
+    }
 }

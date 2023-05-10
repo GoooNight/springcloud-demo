@@ -1,10 +1,8 @@
 package com.example.springsecurityjwt.util;
 
 import com.example.springsecurityjwt.mvc.domain.User;
-import io.jsonwebtoken.Jwt;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.impl.DefaultJwt;
 import lombok.Builder;
 
 import java.util.Date;

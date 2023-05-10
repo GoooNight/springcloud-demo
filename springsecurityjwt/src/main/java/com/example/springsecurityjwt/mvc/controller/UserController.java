@@ -52,7 +52,7 @@ public class UserController {
      */
     @ApiOperation("全查询")
     @GetMapping
-    @PreAuthorize(value = "hasAnyAuthority('1')")
+    @PreAuthorize(value = "@ex.hasAuthority('1')")
     public R queryAll(@ApiParam(value = "user 筛选条件") User user) {
         log.info("------进来了--------");
         return this.userService.queryAll(user);
