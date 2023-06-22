@@ -14,15 +14,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springsecurityjwt" />
+        <module name="spring3-test" />
+        <module name="user-service-demo" />
         <module name="order-service-demo" />
         <module name="eureka-gateway-demo" />
-        <module name="springsecurityjwt" />
         <module name="eureka-demo" />
         <module name="testEve" />
+        <module name="sa-token-demo" />
         <module name="testPlayer" />
         <module name="nacos-demo" />
         <module name="gateway-demo" />
-        <module name="user-service-demo" />
         <module name="feign-api-demo" />
         <module name="mysql-test" />
       </profile>
@@ -44,6 +46,8 @@
       <module name="mysql-test" options="-parameters" />
       <module name="order-demo" options="-parameters" />
       <module name="order-service-demo" options="-parameters" />
+      <module name="sa-token-demo" options="-parameters" />
+      <module name="spring3-test" options="-parameters" />
       <module name="springsecurityjwt" options="-parameters" />
       <module name="testEve" options="-parameters" />
       <module name="user-service-demo" options="-parameters" />

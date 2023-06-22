@@ -51,7 +51,7 @@ class LazySingleInstance{
  * 饿汉模式
  */
 class HungrySingleInstance{
-    private static HungrySingleInstance instance = new HungrySingleInstance();
+    private static final HungrySingleInstance instance = new HungrySingleInstance();
 
     // 防止反射获取构造方法创建实例
     private HungrySingleInstance() {
@@ -70,7 +70,7 @@ class HungrySingleInstance{
  */
 class InnerClassSingleInstance{
     private static class InnerClassHolder{
-        private static InnerClassSingleInstance instance = new InnerClassSingleInstance();
+        private static final InnerClassSingleInstance instance = new InnerClassSingleInstance();
     }
     // 防止反射获取构造方法创建实例
     private InnerClassSingleInstance() {

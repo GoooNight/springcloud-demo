@@ -10,6 +10,7 @@ import java.util.stream.Stream;
  * @date 2023-03-10 20:38
  */
 class MainTest {
+
     MainTest() {
         System.out.println("---------MainTest被初始化-----");
     }

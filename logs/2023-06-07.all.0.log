@@ -1,0 +1,140 @@
+2023-06-07 10:37:21.199 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final 
+2023-06-07 10:37:21.205 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 23140 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-06-07 10:37:21.206 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-06-07 10:37:22.140 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-06-07 10:37:22.146 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:37:22.147 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-06-07 10:37:22.147 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-06-07 10:37:22.224 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-06-07 10:37:22.225 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 985 ms 
+2023-06-07 10:37:22.251 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-06-07 10:37:27.627 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-06-07 10:37:27.859 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-06-07 10:37:28.121 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@646cb2e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e7a9db7, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c0e4e4e, org.springframework.security.web.header.HeaderWriterFilter@2493eec6, org.springframework.security.web.authentication.logout.LogoutFilter@75b363c3, com.example.springsecurityjwt.config.filter.SecurityFilter@4276ad40, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ba97962, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35becbd4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5315266, org.springframework.security.web.session.SessionManagementFilter@2beee3e8, org.springframework.security.web.access.ExceptionTranslationFilter@c0013b8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5503c7d] 
+2023-06-07 10:37:28.135 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)] 
+2023-06-07 10:37:28.348 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:37:28.363 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-06-07 10:37:28.363 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped 
+2023-06-07 10:37:28.365 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s) 
+2023-06-07 10:37:28.383 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references 
+2023-06-07 10:37:28.457 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: addUsingPOST_1 
+2023-06-07 10:37:28.458 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteByIdUsingDELETE_1 
+2023-06-07 10:37:28.459 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: editUsingPUT_1 
+2023-06-07 10:37:28.462 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageUsingPOST_1 
+2023-06-07 10:37:28.464 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: pageLikeUsingPOST_1 
+2023-06-07 10:37:28.466 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryAllUsingGET_1 
+2023-06-07 10:37:28.468 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryAllLikeUsingPOST_1 
+2023-06-07 10:37:28.469 [main] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: queryByIdUsingGET_1 
+2023-06-07 10:37:28.477 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.645 seconds (JVM running for 8.225) 
+2023-06-07 10:38:16.787 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-06-07 10:38:16.794 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-06-07 10:38:17.320 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-06-07 10:38:24.907 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final 
+2023-06-07 10:38:24.911 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 24456 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-06-07 10:38:24.912 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-06-07 10:38:25.936 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-06-07 10:38:25.943 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:38:25.943 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-06-07 10:38:25.943 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-06-07 10:38:26.024 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-06-07 10:38:26.024 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1077 ms 
+2023-06-07 10:38:26.074 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-06-07 10:38:31.292 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-06-07 10:38:31.627 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-06-07 10:38:31.864 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator' 
+2023-06-07 10:38:31.961 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@50e8ed74, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@74eab077, org.springframework.security.web.context.SecurityContextPersistenceFilter@601d9f3a, org.springframework.security.web.header.HeaderWriterFilter@4e3ee457, org.springframework.security.web.authentication.logout.LogoutFilter@543ac221, com.example.springsecurityjwt.config.filter.SecurityFilter@2487e20, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6585df70, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d93ff21, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3063be68, org.springframework.security.web.session.SessionManagementFilter@2133b712, org.springframework.security.web.access.ExceptionTranslationFilter@12532e37, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b511e61] 
+2023-06-07 10:38:31.980 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)] 
+2023-06-07 10:38:32.225 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:38:32.238 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-06-07 10:38:32.239 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped 
+2023-06-07 10:38:32.240 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s) 
+2023-06-07 10:38:32.243 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null 
+2023-06-07 10:38:32.247 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-06-07 10:38:32.733 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-06-07 10:38:32.744 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:38:32.744 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat] 
+2023-06-07 10:38:32.745 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-06-07 10:38:32.748 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:38:32.749 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:38:32.757 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-06-07 10:38:32.780 [main] ERROR org.springframework.boot.SpringApplication - Application run failed 
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.springsecurityjwt.SpringsecurityjwtApplication.main(SpringsecurityjwtApplication.java:16)
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.web.servlet.mvc.condition.PatternsRequestCondition.getPatterns()" because "this.condition" is null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:112)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:473)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1307)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1721)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:510)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:76)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:921)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:682)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.defaultContextBuilder(AbstractDocumentationPluginsBootstrapper.java:108)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:92)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:83)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:94)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+2023-06-07 10:43:27.412 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final 
+2023-06-07 10:43:27.416 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 29564 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-06-07 10:43:27.416 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-06-07 10:43:28.319 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-06-07 10:43:28.324 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:43:28.324 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-06-07 10:43:28.324 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-06-07 10:43:28.399 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-06-07 10:43:28.400 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 955 ms 
+2023-06-07 10:43:28.440 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-06-07 10:43:33.766 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-06-07 10:43:34.007 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-06-07 10:43:34.226 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator' 
+2023-06-07 10:43:34.313 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2aa0feb2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@351c6341, org.springframework.security.web.context.SecurityContextPersistenceFilter@5018b56b, org.springframework.security.web.header.HeaderWriterFilter@5ca4c88a, org.springframework.security.web.authentication.logout.LogoutFilter@24435620, com.example.springsecurityjwt.config.filter.SecurityFilter@38cf3ae1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@737ff5c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e9a836, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@32069394, org.springframework.security.web.session.SessionManagementFilter@44a44a04, org.springframework.security.web.access.ExceptionTranslationFilter@5d93ff21, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ab4d2ba] 
+2023-06-07 10:43:34.326 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)] 
+2023-06-07 10:43:34.548 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-06-07 10:43:34.560 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-06-07 10:43:34.561 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped 
+2023-06-07 10:43:34.563 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s) 
+2023-06-07 10:43:34.563 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Skipping initializing disabled plugin bean swagger v2.0 
+2023-06-07 10:43:34.572 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.466 seconds (JVM running for 7.931) 
+2023-06-07 10:43:34.947 [RMI TCP Connection(4)-10.12.44.163] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-06-07 10:43:34.947 [RMI TCP Connection(4)-10.12.44.163] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-06-07 10:43:34.948 [RMI TCP Connection(4)-10.12.44.163] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-06-07 10:43:57.142 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----OncePerRequestFilter------- 
+2023-06-07 10:43:57.142 [http-nio-8081-exec-1] INFO  c.e.springsecurityjwt.config.filter.SecurityFilter - -----获取token，没有则return------- 
+2023-06-07 10:44:08.916 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-06-07 10:44:08.925 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-06-07 10:44:09.421 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 

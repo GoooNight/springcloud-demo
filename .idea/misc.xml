@@ -18,6 +18,8 @@
         <option value="$PROJECT_DIR$/mysql-test/pom.xml" />
         <option value="$PROJECT_DIR$/springsecurityjwt/pom.xml" />
         <option value="$PROJECT_DIR$/testEve/pom.xml" />
+        <option value="$PROJECT_DIR$/sa-token-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/spring3-test/pom.xml" />
       </list>
     </option>
   </component>

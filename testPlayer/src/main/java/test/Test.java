@@ -14,3 +14,19 @@ public interface Test {
     }
 
 }
+class TestTest {
+
+    public static void main(String[] args) {
+        Test test = new Test() {
+            {
+                System.out.println("你好");
+            }
+
+            @Override
+            public void get() {
+
+            }
+        };
+        System.out.println(test);
+    }
+}
