@@ -19,8 +19,3 @@ sa-token:
   token-style: uuid
   # ????????
   is-log: false
-spring:
-  elasticsearch:
-    password: 1326434036
-    username: elastic
-    uris: http://47.115.215.119:9200

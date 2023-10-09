@@ -18,6 +18,7 @@ public class UserController {
     @PostMapping("user")
     public User getUser(@Validated @RequestBody User user) {
         System.out.println(user);
+
         return user;
     }
 

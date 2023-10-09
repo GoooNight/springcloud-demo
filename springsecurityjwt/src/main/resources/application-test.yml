@@ -37,9 +37,9 @@ spring:
       # allowMultiQueries 是否允许执行多行sql
       # connectTimeout 和数据库服务器建立socket连接时的超时，单位：毫秒, 0表示永不超时
       # socketTimeout 操作（读写）超时，单位：毫秒,0表示永不超时
-      url: jdbc:mysql://47.115.215.119:3306/my_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000
+      url: jdbc:mysql://8.130.64.131:3306/only_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000
       username: root
-      password: Gtyyj180oneBei
+      password: root963
       driver-class-name: com.mysql.cj.jdbc.Driver
   web:
     resources:

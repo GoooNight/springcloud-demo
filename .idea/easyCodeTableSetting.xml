@@ -3,6 +3,22 @@
   <component name="EasyCodeTableSetting">
     <option name="tableInfoMap">
       <map>
+        <entry key="dfsAndBfs.DfsByStack">
+          <value>
+            <TableInfoDTO>
+              <option name="comment" value="" />
+              <option name="fullColumn">
+                <list />
+              </option>
+              <option name="name" value="DfsByStack" />
+              <option name="preName" value="" />
+              <option name="saveModelName" value="" />
+              <option name="savePackageName" value="" />
+              <option name="savePath" value="" />
+              <option name="templateGroupName" value="" />
+            </TableInfoDTO>
+          </value>
+        </entry>
         <entry key="my_test.permission">
           <value>
             <TableInfoDTO>

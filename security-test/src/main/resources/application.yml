@@ -1,0 +1,46 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+#spring:
+#  kafka:
+#    bootstrap-servers: "localhost:9092"
+#    consumer:
+#      group-id: "myGroup"
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    druid:
+#      # useUnicode是否使用Unicode字符集
+#      # characterEncoding 当useUnicode设置为true时，指定字符编码
+#      # serverTimezone 时区
+#      # allowMultiQueries 是否允许执行多行sql
+#      # connectTimeout 和数据库服务器建立socket连接时的超时，单位：毫秒, 0表示永不超时
+#      # socketTimeout 操作（读写）超时，单位：毫秒,0表示永不超时
+#      url: jdbc:mysql://8.130.64.131:3306/only_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowMultiQueries=true&connectTimeout=60000&socketTimeout=60000
+#      username: root
+#      password: root963
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      # 下面为连接池的补充设置，应用到上面所有数据源中
+#      # 初始化大小，最小，最大
+#      initial-size: 5
+#      min-idle: 3
+#      max-active: 30
+#      # 配置获取连接等待超时的时间
+#      max-wait: 60000
+#      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+#      time-between-eviction-runs-millis: 60000
+#      # 配置一个连接在池中最小生存的时间，单位是毫秒
+#      min-evictable-idle-time-millis: 300000
+#      # 打开PSCache，并且指定每个连接上PSCache的大小
+#      pool-prepared-statements: true
+#      max-pool-prepared-statement-per-connection-size: 60
+#      validation-query: SELECT 1 FROM DUAL
+spring:
+  datasource:
+    driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+    url: jdbc:shardingsphere:classpath:sharding.yaml
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

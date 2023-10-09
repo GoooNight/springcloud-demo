@@ -1,0 +1,82 @@
+2023-07-18 15:04:35.278 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final 
+2023-07-18 15:04:35.283 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 21448 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-07-18 15:04:35.284 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-07-18 15:04:36.293 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-07-18 15:04:36.299 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-07-18 15:04:36.300 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-07-18 15:04:36.300 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-07-18 15:04:36.377 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-07-18 15:04:36.377 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1063 ms 
+2023-07-18 15:04:36.421 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-07-18 15:04:42.526 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-07-18 15:04:42.790 [main] ERROR o.s.boot.web.embedded.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'securityFilter': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userServiceImpl': Unsatisfied dependency expressed through field 'passwordUtil'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'passwordUtil': Unsatisfied dependency expressed through method 'setPasswordEncoder' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'securityFilter'; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityFilter': Requested bean is currently in creation: Is there an unresolvable circular reference? 
+2023-07-18 15:04:42.803 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat] 
+2023-07-18 15:04:42.806 [main] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [Druid-ConnectionPool-Create-1432599360] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+ java.base@17/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+ java.base@17/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+ java.base@17/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+ java.base@17/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+ app//com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2776) 
+2023-07-18 15:04:42.807 [main] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [ROOT] appears to have started a thread named [Druid-ConnectionPool-Destroy-1432599360] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17/java.lang.Thread.sleep(Native Method)
+ app//com.alibaba.druid.pool.DruidDataSource$DestroyConnectionThread.run(DruidDataSource.java:2876) 
+2023-07-18 15:04:42.808 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat 
+2023-07-18 15:04:42.808 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-07-18 15:04:43.383 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 
+2023-07-18 15:04:43.393 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled. 
+2023-07-18 15:04:43.402 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  securityFilter (field private com.example.springsecurityjwt.mvc.service.UserService com.example.springsecurityjwt.config.filter.SecurityFilter.userService)
+↑     ↓
+|  userServiceImpl (field private com.example.springsecurityjwt.util.PasswordUtil com.example.springsecurityjwt.mvc.service.impl.UserServiceImpl.passwordUtil)
+↑     ↓
+|  passwordUtil
+↑     ↓
+|  securityConfig (field private com.example.springsecurityjwt.config.filter.SecurityFilter com.example.springsecurityjwt.config.defaultConfig.SecurityConfig.securityFilter)
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+ 
+2023-07-18 15:06:22.534 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final 
+2023-07-18 15:06:22.537 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Starting SpringsecurityjwtApplication using Java 17 on LAPTOP-VE1QMI07 with PID 9620 (E:\JavaWorkSpace\springcloud-demo\springsecurityjwt\target\classes started by 雨天留恋 in E:\JavaWorkSpace\springcloud-demo) 
+2023-07-18 15:06:22.538 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - The following 1 profile is active: "test" 
+2023-07-18 15:06:23.399 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http) 
+2023-07-18 15:06:23.403 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"] 
+2023-07-18 15:06:23.404 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2023-07-18 15:06:23.404 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.68] 
+2023-07-18 15:06:23.477 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2023-07-18 15:06:23.477 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 916 ms 
+2023-07-18 15:06:23.514 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource 
+2023-07-18 15:06:29.339 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited 
+2023-07-18 15:06:29.634 [main] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器初始化------------------- 
+2023-07-18 15:06:29.856 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 1 endpoint(s) beneath base path '/actuator' 
+2023-07-18 15:06:29.953 [main] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ab4d2ba, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@39f68aec, org.springframework.security.web.context.SecurityContextPersistenceFilter@cfb94fd, org.springframework.security.web.header.HeaderWriterFilter@601d9f3a, org.springframework.security.web.authentication.logout.LogoutFilter@c6c84fa, com.example.springsecurityjwt.config.filter.SecurityFilter@33f349ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44a44a04, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a63fa71, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65ff4b8c, org.springframework.security.web.session.SessionManagementFilter@13f36d75, org.springframework.security.web.access.ExceptionTranslationFilter@4b7e4d14, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@215a0264] 
+2023-07-18 15:06:29.967 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)] 
+2023-07-18 15:06:30.208 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"] 
+2023-07-18 15:06:30.221 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path '' 
+2023-07-18 15:06:30.222 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped 
+2023-07-18 15:06:30.224 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s) 
+2023-07-18 15:06:30.224 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Skipping initializing disabled plugin bean swagger v2.0 
+2023-07-18 15:06:30.233 [main] INFO  c.e.springsecurityjwt.SpringsecurityjwtApplication - Started SpringsecurityjwtApplication in 7.966 seconds (JVM running for 8.376) 
+2023-07-18 15:06:30.602 [RMI TCP Connection(5)-10.12.44.163] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-07-18 15:06:30.602 [RMI TCP Connection(5)-10.12.44.163] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2023-07-18 15:06:30.603 [RMI TCP Connection(5)-10.12.44.163] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2023-07-18 15:06:36.259 [SpringApplicationShutdownHook] INFO  c.e.springsecurityjwt.config.filter.AccessFilter - -----------------跨域过滤器销毁------------------- 
+2023-07-18 15:06:36.268 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ... 
+2023-07-18 15:06:36.811 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed 

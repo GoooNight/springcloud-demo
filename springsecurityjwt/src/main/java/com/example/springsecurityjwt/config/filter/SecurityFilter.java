@@ -7,6 +7,7 @@ import com.example.springsecurityjwt.mvc.domain.Permission;
 import com.example.springsecurityjwt.mvc.domain.User;
 import com.example.springsecurityjwt.mvc.mapper.PermissionMapper;
 import com.example.springsecurityjwt.mvc.mapper.UserMapper;
+import com.example.springsecurityjwt.mvc.service.UserService;
 import com.example.springsecurityjwt.util.JWTUtil;
 import com.example.springsecurityjwt.util.R;
 import io.jsonwebtoken.ExpiredJwtException;
@@ -15,6 +16,7 @@ import io.jsonwebtoken.Jwts;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -39,6 +41,11 @@ import java.util.stream.Collectors;
 @Component
 @Slf4j
 public class SecurityFilter extends OncePerRequestFilter {
+
+    // 加入@Lazy解决循环依赖
+    @Autowired
+    @Lazy
+    private UserService userService;
 
     // 要换成缓存或者redis
     @Autowired

@@ -1,6 +1,8 @@
 package test;
 
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -14,5 +16,6 @@ public class MapTest {
         HashMap<String, Integer> map = new HashMap<>(16);
         Stream<String> original = Stream.of("10", "12", "18");
         Stream<Integer> result = original.map(Integer::parseInt);
+
     }
 }

@@ -10,24 +10,6 @@
         </processorPath>
         <module name="gradle-demo.main" />
       </profile>
-      <profile name="Maven default annotation processors profile" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="springsecurityjwt" />
-        <module name="spring3-test" />
-        <module name="user-service-demo" />
-        <module name="order-service-demo" />
-        <module name="eureka-gateway-demo" />
-        <module name="eureka-demo" />
-        <module name="testEve" />
-        <module name="sa-token-demo" />
-        <module name="testPlayer" />
-        <module name="nacos-demo" />
-        <module name="gateway-demo" />
-        <module name="feign-api-demo" />
-        <module name="mysql-test" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="order-demo" target="17" />
@@ -47,6 +29,7 @@
       <module name="order-demo" options="-parameters" />
       <module name="order-service-demo" options="-parameters" />
       <module name="sa-token-demo" options="-parameters" />
+      <module name="security-test" options="-parameters" />
       <module name="spring3-test" options="-parameters" />
       <module name="springsecurityjwt" options="-parameters" />
       <module name="testEve" options="-parameters" />
